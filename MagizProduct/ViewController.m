@@ -70,11 +70,13 @@
     switch (sender.tag)
     {
         case 1:
+            [self playMovie:@"dongxiang"];
             break;
         case 2:
         {
             JFBrandViewController *controller = [[JFBrandViewController alloc] init];
             [self.navigationController pushViewController:controller animated:YES];
+            controller.viewCOntroller = self;
         }
             break;
         case 3:
@@ -88,6 +90,7 @@
         {
             JFBrandViewController *controller = [[JFBrandViewController alloc] init];
             controller.dataType = 1;
+            controller.viewCOntroller = self;
             [self.navigationController pushViewController:controller animated:YES];
         }
             break;
@@ -104,8 +107,14 @@
 }
 
 -(void)playMovie:(NSString *)fileName{
+    
     //视频文件路径
     NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"mp4"];
+    if ([fileName isEqualToString:@"dongxiang"])
+    {
+        path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"wmv"];
+    }
+    
     //视频URL
     NSURL *url = [NSURL fileURLWithPath:path];
     
@@ -124,7 +133,8 @@
     _moviePlayer.repeatMode = MPMovieRepeatModeNone;
     _moviePlayer.scalingMode = MPMovieScalingModeAspectFit;
     _moviePlayer.initialPlaybackTime = -1;
-    [self.view addSubview:_moviePlayer.view];
+    UIWindow  *window = [UIApplication sharedApplication].keyWindow;
+    [window addSubview:_moviePlayer.view];
     [_moviePlayer setFullscreen:YES animated:NO];
     // 注册一个播放结束的通知
     [[NSNotificationCenter defaultCenter] addObserver:self

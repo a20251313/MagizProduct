@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E33E8B01A3839280023C2E7 /* property_play.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0E33E8AF1A3839280023C2E7 /* property_play.mp4 */; };
+		0E33E8B21A383DBB0023C2E7 /* brand_play.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0E33E8B11A383DBB0023C2E7 /* brand_play.mp4 */; };
 		0ED752581A369B2200785A74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED752571A369B2200785A74 /* main.m */; };
 		0ED7525B1A369B2300785A74 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7525A1A369B2300785A74 /* AppDelegate.m */; };
 		0ED7525E1A369B2400785A74 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7525D1A369B2400785A74 /* ViewController.m */; };
@@ -55,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E33E8AF1A3839280023C2E7 /* property_play.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = property_play.mp4; sourceTree = "<group>"; };
+		0E33E8B11A383DBB0023C2E7 /* brand_play.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = brand_play.mp4; sourceTree = "<group>"; };
 		0ED752521A369B2100785A74 /* MagizProduct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagizProduct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED752561A369B2200785A74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ED752571A369B2200785A74 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -212,6 +216,7 @@
 		0ED752AA1A36DC7000785A74 /* brand */ = {
 			isa = PBXGroup;
 			children = (
+				0E33E8B11A383DBB0023C2E7 /* brand_play.mp4 */,
 				0ED752AC1A36DC7000785A74 /* brand1.png */,
 				0ED752AE1A36DC7000785A74 /* brand2.png */,
 				0ED752B01A36DC7000785A74 /* brand3.png */,
@@ -227,6 +232,7 @@
 				0EE53CC41A36EEA3000EB237 /* property1.png */,
 				0EE53CC51A36EEA3000EB237 /* property2.png */,
 				0EE53CC61A36EEA3000EB237 /* property3.png */,
+				0E33E8AF1A3839280023C2E7 /* property_play.mp4 */,
 			);
 			path = property;
 			sourceTree = "<group>";
@@ -326,10 +332,12 @@
 				0ED7528A1A369EFD00785A74 /* main.png in Resources */,
 				0ED752891A369EFD00785A74 /* bg.png in Resources */,
 				0EE53CCB1A36FABE000EB237 /* product_list_detail.png in Resources */,
+				0E33E8B21A383DBB0023C2E7 /* brand_play.mp4 in Resources */,
 				0ED7528B1A369EFD00785A74 /* product_history.png in Resources */,
 				0EE53CC91A36EEA3000EB237 /* property3.png in Resources */,
 				0ED752B81A36DC7000785A74 /* brand3.png in Resources */,
 				0ED752661A369B2500785A74 /* LaunchScreen.xib in Resources */,
+				0E33E8B01A3839280023C2E7 /* property_play.mp4 in Resources */,
 				0ED752BA1A36DC7000785A74 /* back.png in Resources */,
 				0ED752631A369B2500785A74 /* Images.xcassets in Resources */,
 				0ED752851A369EFD00785A74 /* new.mp4 in Resources */,

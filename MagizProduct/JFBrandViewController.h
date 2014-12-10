@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ViewController.h"
 @interface JFBrandViewController : UIViewController
 
+
 @property(nonatomic)NSUInteger      dataType;
+@property(nonatomic)ViewController  *viewCOntroller;
 @end

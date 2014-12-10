@@ -12,7 +12,6 @@
 {
    
 }
-
 @end
 
 @implementation JFScrollViewController
@@ -69,6 +68,8 @@
 {
     return YES;
 }
+
+
 /*
 #pragma mark - Navigation
 
