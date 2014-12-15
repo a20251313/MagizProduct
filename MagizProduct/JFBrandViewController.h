@@ -12,5 +12,4 @@
 
 
 @property(nonatomic)NSUInteger      dataType;
-@property(nonatomic)ViewController  *viewCOntroller;
 @end

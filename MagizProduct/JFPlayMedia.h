@@ -10,4 +10,6 @@
 
 @interface JFPlayMedia : NSObject
 
++(void)playMovie:(NSString *)fileName;
++(void)myMovieFinishedCallback:(NSNotification*)notify;
 @end

@@ -9,9 +9,11 @@
 #import "ViewController.h"
 #import "CABasicAnimation+someAniForProp.h"
 #import <MediaPlayer/MediaPlayer.h>
-#import "JFPlayMovieViewController.h"
 #import "JFBrandViewController.h"
 #import "JFScrollViewController.h"
+#import "JFDXViewController.h"
+#import "JFPlayMethodViewController.h"
+#import "JFPlayMedia.h"
 @interface ViewController ()
 {
     UIImageView     *bgView;
@@ -61,42 +63,68 @@
          [self.navigationController popToRootViewControllerAnimated:NO];
     }
    
-    [self myMovieFinishedCallback:nil];
+    [JFPlayMedia myMovieFinishedCallback:nil];
 }
 
+
+
+
+-(void)playMovie:(NSString *)fileName
+{
+    [JFPlayMedia playMovie:fileName];
+    mainView.userInteractionEnabled = YES;
+    mainView.alpha = 1;
+}
 
 -(IBAction)touchToView:(UIButton*)sender
 {
     switch (sender.tag)
     {
         case 1:
-            [self playMovie:@"dongxiang"];
+        {
+            //动向
+            JFDXViewController *controller = [[JFDXViewController alloc] init];
+            [self.navigationController pushViewController:controller animated:YES];
+            
+        }
             break;
         case 2:
         {
+            //品牌志
             JFBrandViewController *controller = [[JFBrandViewController alloc] init];
             [self.navigationController pushViewController:controller animated:YES];
-            controller.viewCOntroller = self;
+
         }
             break;
         case 3:
-        {
+        {   //产品列表
             JFScrollViewController  *controller = [[JFScrollViewController alloc] init];
+            controller.needProduct = YES;
             [self.navigationController pushViewController:controller animated:YES];
         }
             
             break;
         case 4:
-        {
+        {//产品属性
             JFBrandViewController *controller = [[JFBrandViewController alloc] init];
             controller.dataType = 1;
-            controller.viewCOntroller = self;
             [self.navigationController pushViewController:controller animated:YES];
         }
             break;
         case 5:
         {
-            [self playMovie:@"method"];
+            //玩法
+            JFPlayMethodViewController *play = [[JFPlayMethodViewController alloc] init];
+            [self.navigationController pushViewController:play animated:YES];
+            
+        }
+            break;
+        case 6:
+        {
+            //小镇
+            JFScrollViewController  *controller = [[JFScrollViewController alloc] init];
+            controller.imageName = @"PK0.png";
+            [self.navigationController pushViewController:controller animated:YES];
             
         }
             break;
@@ -106,76 +134,7 @@
     }
 }
 
--(void)playMovie:(NSString *)fileName{
-    
-    //视频文件路径
-    NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"mp4"];
-    if ([fileName isEqualToString:@"dongxiang"])
-    {
-        path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"wmv"];
-    }
-    
-    //视频URL
-    NSURL *url = [NSURL fileURLWithPath:path];
-    
-    if (url == nil)
-    {
-        NSLog(@"playMovie :%@ fail path:%@",fileName,path);
-        return;
-    }
-    //视频播放对象
-    MPMoviePlayerController *_moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
-    self.mpcontroller = _moviePlayer;
-    [_moviePlayer prepareToPlay];
-  
-    _moviePlayer.controlStyle = MPMovieControlStyleEmbedded;
-    _moviePlayer.shouldAutoplay = NO;
-    _moviePlayer.repeatMode = MPMovieRepeatModeNone;
-    _moviePlayer.scalingMode = MPMovieScalingModeAspectFit;
-    _moviePlayer.initialPlaybackTime = -1;
-    UIWindow  *window = [UIApplication sharedApplication].keyWindow;
-    [window addSubview:_moviePlayer.view];
-    [_moviePlayer setFullscreen:YES animated:NO];
-    // 注册一个播放结束的通知
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(myMovieFinishedCallback:)
-                                                 name:MPMoviePlayerPlaybackDidFinishNotification
-                                               object:nil];
-    [_moviePlayer play];
-    
-    
-    
-    
-    mainView.userInteractionEnabled = YES;
-    mainView.alpha = 1;
 
-}
-
--(void)stop:(id)sender
-{
-    NSLog(@"stop:%@",sender);
-    [self.mpcontroller pause];
-}
-
-#pragma mark -------------------视频播放结束委托--------------------
-/*
- @method 当视频播放完毕释放对象
- */
--(void)myMovieFinishedCallback:(NSNotification*)notify
-{
-    
- 
-    
-
-    //销毁播放通知
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:MPMoviePlayerPlaybackDidFinishNotification
-                                                  object:nil];
-    [self.mpcontroller.view removeFromSuperview];
-    [self.mpcontroller stop];
-    self.mpcontroller = nil;
-
-}
 
 
 

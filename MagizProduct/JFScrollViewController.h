@@ -10,4 +10,7 @@
 
 @interface JFScrollViewController : UIViewController
 
+
+@property(nonatomic,strong)NSString *imageName;
+@property(nonatomic)BOOL  needProduct;
 @end

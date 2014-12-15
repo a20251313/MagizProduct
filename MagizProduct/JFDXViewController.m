@@ -7,13 +7,34 @@
 //
 
 #import "JFDXViewController.h"
-
+#import "JFScrollViewController.h"
+#import "JFDXforeignViewController.h"
 @interface JFDXViewController ()
 
 @end
 
 @implementation JFDXViewController
 
+
+-(IBAction)back:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(IBAction)showForeignDetail:(id)sender
+{
+    JFDXforeignViewController  *controller = [[JFDXforeignViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+    
+   
+}
+-(IBAction)showMoreDetail:(id)sender
+{
+    JFScrollViewController *controller = [[JFScrollViewController alloc] init];
+    controller.imageName = @"dongxiang_detail1.png";
+    [self.navigationController pushViewController:controller animated:YES];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -22,6 +43,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 /*

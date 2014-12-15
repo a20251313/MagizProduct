@@ -12,6 +12,6 @@
 
 
 
--(void)playMovie:(NSString *)fileName;
+
 @end
 

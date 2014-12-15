@@ -24,20 +24,28 @@
                         </imageView>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3Z-Fd-hwo">
                             <rect key="frame" x="228" y="93" width="113" height="64"/>
-                            <state key="normal" title="Button" image="product_history.png">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
+                            <state key="normal" image="product_history.png"/>
                             <connections>
                                 <action selector="touchToView:" destination="-1" eventType="touchUpInside" id="LrR-9I-OLd"/>
                             </connections>
                         </button>
-                        <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrW-ba-t5M">
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrW-ba-t5M">
                             <rect key="frame" x="60" y="309" width="113" height="64"/>
-                            <state key="normal" title="Button" image="product_dongxiang.png">
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <state key="normal" image="product_dongxiang.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
                                 <action selector="touchToView:" destination="-1" eventType="touchUpInside" id="Dwj-oM-vpi"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Caf-0Y-Gqo">
+                            <rect key="frame" x="471" y="301" width="113" height="64"/>
+                            <state key="normal" image="product_list.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="touchToView:" destination="-1" eventType="touchUpInside" id="Ocw-GH-UXW"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2y-wD-cdq">
@@ -58,13 +66,13 @@
                                 <action selector="touchToView:" destination="-1" eventType="touchUpInside" id="Irm-py-ObC"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Caf-0Y-Gqo">
-                            <rect key="frame" x="471" y="301" width="113" height="64"/>
-                            <state key="normal" image="product_list.png">
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGS-F2-tRz">
+                            <rect key="frame" x="715" y="374" width="151" height="131"/>
+                            <state key="normal">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="touchToView:" destination="-1" eventType="touchUpInside" id="Ocw-GH-UXW"/>
+                                <action selector="touchToView:" destination="-1" eventType="touchUpInside" id="OWO-AW-Hb6"/>
                             </connections>
                         </button>
                     </subviews>

@@ -7,7 +7,7 @@
 //
 
 #import "JFDXforeignViewController.h"
-
+#import "JFPlayMedia.h"
 @interface JFDXforeignViewController ()
 
 @end
@@ -22,6 +22,21 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)showMovie:(id)sender
+{
+    [JFPlayMedia playMovie:@"dongxiang_area"];
+}
+
+-(IBAction)back:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 /*

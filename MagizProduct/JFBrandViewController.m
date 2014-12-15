@@ -8,6 +8,7 @@
 
 #import "JFBrandViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "JFPlayMedia.h"
 
 @interface JFBrandViewController ()
 {
@@ -20,13 +21,12 @@
     __weak IBOutlet UIView      *aniView;
 }
 
-@property(nonatomic,strong)MPMoviePlayerController *mpcontroller;
 @end
 
 @implementation JFBrandViewController
 @synthesize dataType;
-@synthesize mpcontroller;
-@synthesize viewCOntroller;
+
+
 
 -(IBAction)showNext:(id)sender
 {
@@ -176,84 +176,16 @@
 {
     if (self.dataType == 1)
     {
-        [self.viewCOntroller playMovie:@"property_play"];
+        [JFPlayMedia playMovie:@"property_play"];
     }else
     {
-        [self.viewCOntroller playMovie:@"brand_play"];
+        [JFPlayMedia playMovie:@"brand_play"];
     }
 }
 
 
 
 
--(void)playMovie:(NSString *)fileName{
-    
-    //视频文件路径
-    NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"mp4"];
-    if ([fileName isEqualToString:@"dongxiang"])
-    {
-        path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"wmv"];
-    }
-    
-    //视频URL
-    NSURL *url = [NSURL fileURLWithPath:path];
-    
-    if (url == nil)
-    {
-        NSLog(@"playMovie :%@ fail path:%@",fileName,path);
-        return;
-    }
-    //视频播放对象
-    MPMoviePlayerController *_moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
-    self.mpcontroller = _moviePlayer;
-    //[_moviePlayer prepareToPlay];
-    
-    _moviePlayer.controlStyle = MPMovieControlStyleEmbedded;
-    _moviePlayer.shouldAutoplay = NO;
-    _moviePlayer.repeatMode = MPMovieRepeatModeNone;
-    _moviePlayer.scalingMode = MPMovieScalingModeAspectFit;
-    _moviePlayer.initialPlaybackTime = -1;
-    [self.view addSubview:_moviePlayer.view];
-    [_moviePlayer setFullscreen:YES animated:NO];
-    // 注册一个播放结束的通知
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(myMovieFinishedCallback:)
-                                                 name:MPMoviePlayerPlaybackDidFinishNotification
-                                               object:nil];
-    [_moviePlayer play];
-    
-    
-    
-    
-
-    
-}
-
--(void)stop:(id)sender
-{
-    NSLog(@"stop:%@",sender);
-    [self.mpcontroller pause];
-}
-
-#pragma mark -------------------视频播放结束委托--------------------
-/*
- @method 当视频播放完毕释放对象
- */
--(void)myMovieFinishedCallback:(NSNotification*)notify
-{
-    
-    
-    
-    
-    //销毁播放通知
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:MPMoviePlayerPlaybackDidFinishNotification
-                                                  object:nil];
-    [self.mpcontroller.view removeFromSuperview];
-    [self.mpcontroller stop];
-    self.mpcontroller = nil;
-    
-}
 
 
 /*
