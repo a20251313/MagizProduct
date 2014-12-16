@@ -14,10 +14,13 @@
 #import "JFDXViewController.h"
 #import "JFPlayMethodViewController.h"
 #import "JFPlayMedia.h"
+#import "publidDefine.h"
 @interface ViewController ()
 {
     UIImageView     *bgView;
     IBOutlet    UIView     *mainView;
+    IBOutlet    UIButton     *btnDongxiang;
+    IBOutlet    UIButton     *btnTown;
 }
 
 @property(nonatomic,strong)MPMoviePlayerController *mpcontroller;
@@ -49,6 +52,11 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
 
     
+    if (OLDVERSION)
+    {
+        btnDongxiang.hidden = YES;
+        btnTown.hidden = YES;
+    }
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -99,7 +107,11 @@
         case 3:
         {   //产品列表
             JFScrollViewController  *controller = [[JFScrollViewController alloc] init];
-            controller.needProduct = YES;
+            if (!OLDVERSION)
+            {
+                 controller.needProduct = YES; 
+            }
+          
             [self.navigationController pushViewController:controller animated:YES];
         }
             
@@ -113,6 +125,11 @@
             break;
         case 5:
         {
+            if (OLDVERSION)
+            {
+                [self playMovie:@"method.mp4"];
+                return;
+            }
             //玩法
             JFPlayMethodViewController *play = [[JFPlayMethodViewController alloc] init];
             [self.navigationController pushViewController:play animated:YES];

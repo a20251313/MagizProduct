@@ -59,7 +59,7 @@
 
 -(void)showImageViewWithTag:(NSUInteger)tag
 {
-    NSString    *strName = [NSString stringWithFormat:@"product_list_00%ud.png",tag+1];
+    NSString    *strName = [NSString stringWithFormat:@"product_list_00%d.png",tag+1];
     UIImage  *image = [UIImage imageNamed:strName];
     
     self.detailView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 1024, 768)];

@@ -163,6 +163,7 @@
 		0EE9D8341A3EAC7F00D30B5E /* product_list_008.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product_list_008.png; sourceTree = "<group>"; };
 		0EE9D8351A3EAC7F00D30B5E /* product_list_009.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product_list_009.png; sourceTree = "<group>"; };
 		0EE9D8361A3EAC7F00D30B5E /* product_list_detail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product_list_detail.png; sourceTree = "<group>"; };
+		0EE9D8431A3EE63400D30B5E /* publidDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = publidDefine.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +268,7 @@
 				0ECF32991A3E8B3300F4036A /* JFPlayMethodViewController.xib */,
 				0EE9D8291A3EA83F00D30B5E /* JFPlayMedia.h */,
 				0EE9D82A1A3EA83F00D30B5E /* JFPlayMedia.m */,
+				0EE9D8431A3EE63400D30B5E /* publidDefine.h */,
 				0ED7527D1A369EFD00785A74 /* new.mp4 */,
 				0ED7529C1A36A8B500785A74 /* method.mp4 */,
 				0ED752621A369B2500785A74 /* Images.xcassets */,

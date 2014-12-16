@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
+                <outlet property="btnDongxiang" destination="DrW-ba-t5M" id="cwC-dA-3iz"/>
+                <outlet property="btnTown" destination="AGS-F2-tRz" id="OaL-es-alS"/>
                 <outlet property="mainView" destination="CLI-iB-uJg" id="So0-1O-F6b"/>
                 <outlet property="view" destination="T2y-H1-O18" id="Cj9-Ph-H3V"/>
             </connections>
