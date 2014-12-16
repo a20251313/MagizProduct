@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8A78BB88-B113-4EF6-BDFF-EF1EFB7B84CA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MagizProduct</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>72B0767C4FEA8B9EC5A54C37E6882296198C2373</key>
+		<string>https://github.com/a20251313/MagizProduct.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MagizProduct.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>72B0767C4FEA8B9EC5A54C37E6882296198C2373</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/a20251313/MagizProduct.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>72B0767C4FEA8B9EC5A54C37E6882296198C2373</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>72B0767C4FEA8B9EC5A54C37E6882296198C2373</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MagizProduct</string>
+		</dict>
+	</array>
+</dict>
+</plist>
